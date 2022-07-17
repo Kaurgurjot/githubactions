@@ -1,6 +1,8 @@
 name: shell commands
-
-on: [pull_request]
+on:
+  repository_dispatch:
+    types: [build]
+# on: [pull_request]
 
 jobs:
   run-shell-command:

@@ -5,8 +5,8 @@ on:
     types: [build]
   # schedule:
   #   - cron: "*/5 * * * *"
-  pull_request:
-    types: [closed, assigned, reopened]
+  # pull_request:
+  #   types: [closed, assigned, reopened]
      
 
 jobs:
