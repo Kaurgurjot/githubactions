@@ -12,6 +12,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-20.04
     steps:
+      - name: Access Payload
+        run: echo ${{github.event.client_payload.env}}
       - name: List Files
         run: |
           pwd
