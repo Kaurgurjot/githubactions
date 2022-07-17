@@ -1,6 +1,20 @@
 name: shell commands
 
-on: [pull_request]   
+on: 
+  push:
+    branches:
+      - master
+      - 'feature/*'  # will match feature/featA , feature/featB but will not match feature/featA/A
+      - 'feature/**' # will match feature/featA , feature/featB will also match feature/featA/A
+      - '!feature/featC'
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
+      - '!docs/**'
+    # branches-ignore:
+    #   - "development"
+
   # schedule:
   #   - cron: "*/5 * * * *"
 
